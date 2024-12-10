@@ -2,14 +2,14 @@
 
 
 ## **Project Description**
-This project analyzes Spotify datasets to uncover insights related to song trends, genres, and popularity. The raw data, sourced from Kaggle, was initially provided in CSV format. The dataset contained valuable information, but it required extensive cleaning and transformation to make it suitable for analysis.
+This project analyzes Spotify datasets to uncover insights related to song trends, genres, and popularity. The raw data, sourced from [Kaggle](https://www.kaggle.com/datasets/tonygordonjr/spotify-dataset-2023), was initially provided in CSV format. The dataset contained valuable information, but it required extensive cleaning and transformation to make it suitable for analysis.
 
 I utilized AWS services including S3, Glue, and Athena to handle, transform, and analyze the data. Key steps included:
 
 - **Merging Multiple CSV Files**: The data was split into multiple files such as `album.csv`, `artist.csv`, and `tracks.csv`. These files were merged using common fields like album and artist IDs to create a consolidated dataset.
 - **Data Cleaning**: Using **Pandas** and **PySpark**, I handled missing values, removed duplicates, and dropped irrelevant columns. This ensured the data was ready for analysis.
 - **Transformation**: The data was then transformed into a more efficient Parquet format using AWS Glue, optimizing it for faster querying and storage.
-- **Querying and Analysis**: The transformed data was stored in AWS S3, and insights were derived using SQL queries in AWS Athena.
+- **Querying and Analysis**: The transformed data was stored in AWS S3 and insights were derived using SQL queries in AWS Athena.
 
 This project offers a comprehensive data pipeline, from raw data ingestion and transformation to insightful data analysis, showcasing the power of AWS cloud technologies.
 
