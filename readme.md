@@ -1,16 +1,27 @@
 # Spotify Data Analysis using AWS
 
-## Project Description
-This project analyzes Spotify datasets to extract meaningful insights about song trends, genres, and popularity metrics. AWS services such as S3, Glue, and Athena were utilized for managing, transforming, and analyzing the data. The output includes clean, transformed Parquet files and visualized insights.
 
-## Table of Contents
+## **Project Description**
+This project analyzes Spotify datasets to uncover insights related to song trends, genres, and popularity. The raw data, sourced from Kaggle, was initially provided in CSV format. The dataset contained valuable information, but it required extensive cleaning and transformation to make it suitable for analysis.
+
+I utilized AWS services including S3, Glue, and Athena to handle, transform, and analyze the data. Key steps included:
+
+- **Merging Multiple CSV Files**: The data was split into multiple files such as `album.csv`, `artist.csv`, and `tracks.csv`. These files were merged using common fields like album and artist IDs to create a consolidated dataset.
+- **Data Cleaning**: Using **Pandas** and **PySpark**, I handled missing values, removed duplicates, and dropped irrelevant columns. This ensured the data was ready for analysis.
+- **Transformation**: The data was then transformed into a more efficient Parquet format using AWS Glue, optimizing it for faster querying and storage.
+- **Querying and Analysis**: The transformed data was stored in AWS S3, and insights were derived using SQL queries in AWS Athena.
+
+This project offers a comprehensive data pipeline, from raw data ingestion and transformation to insightful data analysis, showcasing the power of AWS cloud technologies.
+
+
+## **Table of Contents**
 - [Spotify Data Analysis using AWS](#spotify-data-analysis-using-aws)
-  - [Project Description](#project-description)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Tech Stack](#tech-stack)
+  - [**Project Description**](#project-description)
+  - [**Table of Contents**](#table-of-contents)
+  - [**Features**](#features)
+  - [**Tech Stack**](#tech-stack)
   - [Data Workflow](#data-workflow)
-  - [Setup](#setup)
+  - [**Setup Guide**](#setup-guide)
     - [Step 1: Create an IAM User](#step-1-create-an-iam-user)
     - [Step 2: Log In with IAM Credentials](#step-2-log-in-with-iam-credentials)
     - [Step 3: Set Up S3 Bucket](#step-3-set-up-s3-bucket)
@@ -19,24 +30,27 @@ This project analyzes Spotify datasets to extract meaningful insights about song
     - [Step 6: Create and Run an ETL Job in AWS Glue](#step-6-create-and-run-an-etl-job-in-aws-glue)
     - [Step 7: Query the Transformed Data in AWS Athena](#step-7-query-the-transformed-data-in-aws-athena)
 
-## Features
-- Storage of raw CSV data in AWS S3.
-- Transformation of data into Parquet format using AWS Glue.
-- Querying transformed data with AWS Athena.
-- Visual insights derived from the transformed data.
 
-## Tech Stack
+---
+## **Features**
+- **Storage of raw CSV data in AWS S3**: Secure and scalable storage for large datasets.
+- **Transformation of data into Parquet format using AWS Glue**: Optimizes storage and query performance.
+- **Querying the transformed data with AWS Athena**: Enables fast SQL-based analysis on the cleaned and transformed data.
+- **Visual Insights**: Generated meaningful visual insights based on the transformed data.
+
+## **Tech Stack**
 - **Data Formats**: CSV (input), Parquet (output)
 - **AWS Services**: S3, Glue, Athena
-
+- **Data Transformation Tools**: Pandas, PySpark
 
 ## Data Workflow
 1. **Input Data**: Raw CSV files are uploaded to S3.
 2. **ETL Process**: AWS Glue processes and transforms the CSV files into Parquet format.
-3. **Analysis**: Transformed data is queried using AWS Athena.
+3. **Analysis**: 
 
+---
 
-## Setup
+## **Setup Guide**
 
 ### Step 1: Create an IAM User
 1. Log in to the AWS Management Console with your root account.
